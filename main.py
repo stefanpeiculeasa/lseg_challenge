@@ -112,7 +112,7 @@ def generate_mermaid_from_graph(direction: str, nodes: Dict[str, str], edges: Li
 def call_ollama(messages: List[Dict[str, str]], model: str) -> str:
     payload = {"model": model, "messages": messages, "stream": False}
     try:
-        response = requests.post(OLLAMA_URL, json=payload, timeout=180)
+        response = requests.post(OLLAMA_URL, json=payload, timeout=500)
         response.raise_for_status()
         return response.json()["message"]["content"]
     except Exception as e:
