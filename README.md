@@ -39,7 +39,7 @@ pip install streamlit requests streamlit-mermaid
 
 2. **Run the app:**
    ```bash
-   streamlit run app.py
+   streamlit run main.py
    ```
 
 3. **Open your browser** at `http://localhost:8501`
@@ -75,21 +75,21 @@ In the sidebar under **🎨 Diagram Style**, pick a theme and a default directio
 
 | Setting | Location | Default |
 |---|---|---|
-| Ollama API URL | `OLLAMA_URL` constant in `app.py` | `http://localhost:11434/api/chat` |
-| Default model | `DEFAULT_MODEL` constant in `app.py` | `gpt-oss:20b` |
+| Ollama API URL | `OLLAMA_URL` constant in `main.py` | `http://localhost:11434/api/chat` |
+| Default model | `DEFAULT_MODEL` constant in `main.py` | `gpt-oss:20b` |
 | Model name (runtime) | Sidebar → Settings | Same as default |
 | Guardrails | Sidebar → Settings checkbox | Enabled |
-| Banned words | `BANNED_WORDS` list in `app.py` | `["hack", "exploit", "malware"]` |
+| Banned words | `BANNED_WORDS` list in `main.py` | `["hack", "exploit", "malware"]` |
 
 ---
 
 ## Project Structure
 
 ```
-app.py                  # Main application (single-file)
+main.py                  # Main application (single-file)
 ```
 
-Key functions inside `app.py`:
+Key functions inside `main.py`:
 
 | Function | Purpose |
 |---|---|
